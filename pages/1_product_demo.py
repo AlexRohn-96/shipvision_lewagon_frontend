@@ -43,35 +43,16 @@ if uploaded_file is not None:
 
         pixel_values = red_channel + green_channel + blue_channel
 
-        # Convert the list to a NumPy array
-        image_array = np.array(pixel_values)
 
-# Extract the R, G, and B channels
-        R_data = image_array[0:6400]
-        G_data = image_array[6400:2*6400]
-        B_data = image_array[2*6400:]
 
-        # Reshape each channel into an 80x80 array
-        R = R_data.reshape((80, 80))
-        G = G_data.reshape((80, 80))
-        B = B_data.reshape((80, 80))
-
-        # Stack the R, G, and B channels to form the image
-        image_rgb = np.stack((R, G, B), axis=-1)
-
-        print(image_rgb.shape)
-
-        # Plot the image
-        plt.imshow(image_rgb)
-        plt.axis('off')  # Optional: Hide axes
-        plt.show()
 
 
         #pixel_values = [0, 128, 255]
         #breakpoint()
         # Define your API endpoint
-        api_url = "http://127.0.0.1:8000/predict"  # Replace with your actual API URL
-
+        # api_url = "http://127.0.0.1:8000/predict"  # Replace with your actual API URL
+        api_url = "https://shipvision-647806685234.europe-west1.run.app/predict"  # Replace with your actual API URL
+        #https://shipvision-647806685234.europe-west1.run.app/
         # Send the list of pixel values to the API as JSON (POST request)
         try:
             # params = {"X": pixel_values}  # Assuming pixel_values is simple and can be passed as a string
@@ -80,6 +61,7 @@ if uploaded_file is not None:
                 api_url,
                 json={"X": pixel_values}  # Send the normalized pixel list as JSON
             )
+            #breakpoint()
 
             # Check if the request was successful
             if response.status_code == 200:
