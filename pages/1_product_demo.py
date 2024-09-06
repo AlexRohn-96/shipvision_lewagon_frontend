@@ -1,9 +1,7 @@
-import numpy as np
 import streamlit as st
 import requests
-import matplotlib.pyplot as plt
 from PIL import Image
-import io
+
 
 st.title("Ship Detection in Satellite Images")
 
