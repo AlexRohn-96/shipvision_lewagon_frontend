@@ -52,15 +52,14 @@ if uploaded_file is not None:
         pixel_values = red_channel + green_channel + blue_channel
 
 
-
-
-
         #pixel_values = [0, 128, 255]
 
         # Define your API endpoint
-        api_url = "http://127.0.0.1:8000/predict"  # Replace with your actual API URL
-        #api_url = "https://shipvision-83086093480.europe-west1.run.app/predict"  # Replace with your actual API URL
-        #https://shipvision-647806685234.europe-west1.run.app/
+
+        #api_url = "http://127.0.0.1:8000/predict"  # Replace with your actual API URL
+        api_url = "https://shipvision-647806685234.europe-west1.run.app/predict"  # Replace with your actual API URL
+
+  
         # Send the list of pixel values to the API as JSON (POST request)
         try:
             # params = {"X": pixel_values}  # Assuming pixel_values is simple and can be passed as a string
