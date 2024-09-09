@@ -9,7 +9,7 @@ import io
 col_icone, col_title = st.columns([1, 5]) #ratio to set the distance between the title and logo
 # display the image in front of the title
 with col_icone:
-    image_path='/home/olivierpi/code/AlexRohn-96/shipvision_lewagon_frontend/media/ship_vision.png'
+    image_path='media/ship_vision.png'
     st.image(image_path,width=120)
 
 with col_title:

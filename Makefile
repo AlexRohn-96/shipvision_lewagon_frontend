@@ -3,7 +3,7 @@ install_requirements:
 	@pip install -r requirements.txt
 
 streamlit:
-	@streamlit run pages/1_product_demo.py --server.enableXsrfProtection false
+	@streamlit run Hello.py
 
 # clean:
 # 	@rm -fr */__pycache__
