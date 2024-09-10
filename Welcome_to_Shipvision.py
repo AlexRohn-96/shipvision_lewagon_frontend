@@ -10,39 +10,9 @@ st.set_page_config(
 # Add an emoji to the sidebar header
 st.sidebar.header("🌟 Welcome to ShipVision")
 
-def set_background_color():
-    st.markdown(
-        """
-        <style>
-        .stApp {
-            background-color: #FFFFFF; /* White background color */
-        }
-        .title-container {
-            display: flex;
-            align-items: center;
-            padding: 10px; /* Adjust padding as needed */
-            justify-content: flex-start; /* Ensure items align to the left */
-        }
-        .title-container h1 {
-            color: black; /* Ensure the title is black */
-            margin: 0; /* Remove default margin */
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
 
-set_background_color()
 
-# Create a container for the title
-st.markdown(
-    """
-    <div class="title-container">
-        <h1>Ship Detection in Satellite Images</h1>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.title("Ship Detection in Satellite Images")
 
 st.write("ShipVision is an AI-based tool to detect ships on satellite imagery. Our algorithm has been trained on thousands of real-life satellite images.")
 st.write("On this website, you can try our algorithm in 2 different ways.")
