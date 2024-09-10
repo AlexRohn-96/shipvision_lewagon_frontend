@@ -3,7 +3,7 @@ install_requirements:
 	@pip install -r requirements.txt
 
 streamlit:
-	@streamlit run Hello.py
+	@streamlit run Welcome_to_Shipvision.py
 
 # clean:
 # 	@rm -fr */__pycache__
