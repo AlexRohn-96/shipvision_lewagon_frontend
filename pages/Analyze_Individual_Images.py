@@ -45,10 +45,11 @@ if uploaded_file is not None:
 
         pixel_values = red_channel + green_channel + blue_channel
 
+ 
+        # api_url = "http://127.0.0.1:8000/predict"  # Replace with your actual API URL
+ 
 
-        api_url = "http://127.0.0.1:8000/predict"  # Replace with your actual API URL
-
-        # api_url = "https://shipvision-647806685234.europe-west1.run.app/predict"  # Replace with your actual API URL
+        api_url = "https://shipvision-647806685234.europe-west1.run.app/predict"  # Replace with your actual API URL
 
         # Send the list of pixel values to the API as JSON (POST request)
         try:
