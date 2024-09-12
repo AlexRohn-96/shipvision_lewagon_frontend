@@ -45,9 +45,9 @@ if uploaded_file is not None:
 
         pixel_values = red_channel + green_channel + blue_channel
 
- 
+
         # api_url = "http://127.0.0.1:8000/predict"  # Replace with your actual API URL
- 
+
 
         api_url = "https://shipvision-647806685234.europe-west1.run.app/predict"  # Replace with your actual API URL
 
@@ -70,10 +70,18 @@ if uploaded_file is not None:
                 st.error(f"Error: API returned status code {response.status_code}")
 
             if result==1:
-                st.success(f"SHIP: according to our model this image contains a ship.")
+                # Display the SHIP message in green and large font
+                st.markdown(
+                    "<h2 style='color:green;'>SHIP: According to our model, this image contains a ship.</h2>",
+                    unsafe_allow_html=True
+                )
 
             if  result==0:
-                st.success(f"NO SHIP: according to our model this image does NOT contain a ship.")
+                # Display the NO SHIP message in red and large font
+                st.markdown(
+                    "<h2 style='color:red;'>NO SHIP: According to our model, this image does NOT contain a ship.</h2>",
+                    unsafe_allow_html=True
+                )
 
 
         except requests.exceptions.RequestException as e:

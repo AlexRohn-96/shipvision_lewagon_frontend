@@ -30,11 +30,11 @@ if uploaded_file is not None:
         image.save(img_bytes, format='PNG')
         img_bytes = img_bytes.getvalue()
 
- 
+
         api_url = "https://shipvision-647806685234.europe-west1.run.app/predict-image"
- 
+
         #api_url = "http://127.0.0.1:8000/predict-image"
- 
+
 
         # Initialize progress bar
         progress_text = "Connecting to API..."
